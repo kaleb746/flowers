@@ -474,3 +474,53 @@ mask-image: linear-gradient(to top, transparent 20%, var(--dark-color));
   0%, 100% { transform: rotate(-10deg) rotateY(-180deg); }
   50% { transform: rotate(-20deg) rotateY(-180deg); }
 }
+/* ====== Ajuste MOBILE (para que se vea como en laptop) ====== */
+@media (max-width: 600px) {
+  /* que el escenario use mejor el alto real del teléfono */
+  .flowerStage {
+    min-height: 100svh; /* iOS moderno */
+  }
+
+  /* sube todo el conjunto un poco */
+  .flowers {
+    transform: translateY(-6svh) scale(1.05);
+  }
+
+  /* sube la base donde nacen los tallos */
+  .flower {
+    bottom: 18svh;
+  }
+
+  /* centra el ramo con offsets relativos (no px) */
+  .flower--1 {
+    transform: translateX(-22vw);
+  }
+  .flower--2 {
+    transform: translateX(0vw) rotate(18deg);
+  }
+  .flower--3 {
+    transform: translateX(22vw) rotate(-16deg);
+  }
+
+  /* lo CLAVE: en móvil NO uses vmin para altura del tallo */
+  .flower--1 .flower__line { height: 72vh; }
+  .flower--2 .flower__line { height: 64vh; }
+  .flower--3 .flower__line { height: 66vh; }
+
+  /* ajusta pastos para que no empujen raro */
+  .flower__grass {
+    bottom: 18svh;
+    transform: translateX(-34vw) rotate(-48deg) rotateY(40deg);
+  }
+  .flower__grass--2 {
+    bottom: 16svh;
+    transform: translateX(22vw) scale(0.5) rotate(75deg) rotateX(10deg) rotateY(-200deg);
+  }
+
+  .long-g--1 {
+    transform: translateX(-60vw) scale(0.9) rotate(-5deg);
+  }
+  .long-g--5 {
+    transform: translateX(46vw) scale(0.9) rotate(2deg);
+  }
+}

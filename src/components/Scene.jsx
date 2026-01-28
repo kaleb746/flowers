@@ -18,7 +18,7 @@ export default function Scene() {
           {/* Texto atravesando la escena (igual a la referencia) */}
           <div className="pointer-events-none absolute left-1/2 top-[68%] w-[120%] -translate-x-1/2 -translate-y-1/2">
             <p className="select-none text-center font-semibold tracking-[0.35em] text-[#c7c84a] text-[12px] sm:text-[14px] md:text-[16px] opacity-90">
-              PARA TI CON CARIÑO DE KALEB, TE AMO
+              PARA TI SUZ, TE AMO
             </p>
           </div>
         </div>
